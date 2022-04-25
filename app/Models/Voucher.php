@@ -11,4 +11,9 @@ class Voucher extends Model
 
     protected $table = 'vouchers';
 
+    public function reserva()
+    {
+        return $this->belongsTo(Reserva::class);
+    }
+
 }

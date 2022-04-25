@@ -13,7 +13,7 @@ class Joc extends Model
 
     public function sala()
     {
-        return $this->hasOne(Sala::class);
+        return $this->hasMany(Sala::class);
 
     }
 }

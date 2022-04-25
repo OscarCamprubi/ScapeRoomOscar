@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('descripcio');
             $table->integer('minJugadors');
             $table->integer('maxJugadors');
-            $table->integer('sala_id')->nullable();
             $table->timestamps();
         });
     }

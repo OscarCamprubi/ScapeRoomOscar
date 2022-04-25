@@ -15,7 +15,6 @@ return new class extends Migration {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->integer('aforament');
-            $table->integer('joc_id')->nullable();
             $table->timestamps();
         });
     }

@@ -1,13 +1,9 @@
 @extends('layouts.app')
-@section('css')
-@endsection
 @section('title')
     Inici
 @endsection
 @section('contingut')
-    Hello World
-@endsection
-@section('js')
-
-
+    <div id="app" class="content">
+        <example-component></example-component>
+    </div>
 @endsection
