@@ -8,6 +8,7 @@ use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ValoracioController;
+use \App\Http\Controllers\LogInController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,7 +59,6 @@ Route::get('edit-voucher/{voucherID}', [VoucherController::class, 'edit']);
 Route::post('update-voucher', [VoucherController::class, 'update']);
 Route::get('delete-voucher/{voucherID}', [VoucherController::class, 'delete']);
 
-
 //******************************ROL**********************************//
 Route::get('list-rol', [RolController::class, 'list']);
 Route::get('create-rol', [RolController::class, 'create']);
@@ -70,7 +70,6 @@ Route::get('delete-rol/{rolID}', [RolController::class, 'delete']);
 //******************************USER**********************************//
 Route::get('list-user', [UserController::class, 'list']);
 Route::get('show-user/{userID}', [UserController::class, 'show']);
-Route::get('create-user', [UserController::class, 'create']);
 Route::post('save-user', [UserController::class, 'save']);
 Route::get('edit-user/{userID}', [UserController::class, 'edit']);
 Route::post('update-user', [UserController::class, 'update']);
@@ -83,3 +82,8 @@ Route::post('save-valoracio', [ValoracioController::class, 'save']);
 Route::get('edit-valoracio/{valoracioID}', [ValoracioController::class, 'edit']);
 Route::post('update-valoracio', [ValoracioController::class, 'update']);
 Route::get('delete-valoracio/{valoracioID}', [ValoracioController::class, 'delete']);
+
+//******************************LOGIN/REGISTER*******************************//
+Route::get('register', [UserController::class, 'create']);
+Route::get('login', [LogInController::class, 'login']);
+Route::post('checkLogin', [LogInController::class, 'checkLogin']);
